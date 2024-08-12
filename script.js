@@ -13,16 +13,17 @@ const perguntas = [
           texto: "Isso é assustador!",
           afirmacao: [ 
           "No início ficou com medo do que essa tecnologia pode fazer.",
-          ""
+          "Achou assustador pensar na velocidade na qual a tecnologia está avançando."
         ]
         },
         {
           texto: "Isso é maravilhoso!",
-          afirmacao: "afirmação",
-        },
-      ],
-    },
-    {
+          afirmacao: [
+          "Quis saber como usar IA no seu dia a dia."
+           "Pensou que IA pode ajudar em tarefas da sua vida."
+          ]
+        }
+    ]
       enunciado:
         "Com a descoberta desta tecnologia, chamada Inteligência Artificial, uma professora de tecnologia da escola decidiu fazer uma sequência de aulas sobre esta tecnologia. No fim de uma aula ela pede que você escreva um trabalho sobre o uso de IA em sala de aula. Qual atitude você toma?",
       alternativas: [
@@ -127,9 +128,13 @@ function mostraResultado() {
     caixaPerguntas.textContent = "Em 2049...";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
+    mostraPergunta();
 }
 
 // código omitido
 
+function aleatorio (lista){
+  const posicao = Math.floor(Math.random()* lista.length);
+  return lista[posicao];
+}
 
-mostraPergunta();
